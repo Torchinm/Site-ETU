@@ -15,7 +15,12 @@ body {
 body::-webkit-scrollbar {
     width: 12px;
 }
-  
+
+ul li{
+    list-style-type: none;
+
+}
+
 body::-webkit-scrollbar-thumb {
     border-radius: 3px;
 }
@@ -99,7 +104,7 @@ h1 {
     transform: scale(1.05);
 }
 
-.Site:active, .Amphi:hover, .Salle:hover{
+.Site:active{
     background-color: #818181;
 }
 
@@ -247,6 +252,7 @@ h1 {
     width: 90%;
     height: 100px;
     background-color: #5a0cb9;
+    color: white;
 }
 
 .ametice:before{
@@ -284,31 +290,6 @@ h1 {
     transition: all 1s ease-in-out;
     font-size: 1.5em;
     display: none;
-}
-
-@media (max-width: 768px) {
-    .google::before {
-        margin-left: 20%;
-    }
-    .fixed-header{
-        align-items: center;
-        justify-content: space-around;
-    }
-    .Site, .Amphi, .Salle {
-        width: 40%;
-        margin: 10px;
-        border-radius: 80px;
-        font-size: 1em;
-        border-radius: 80px;
-        padding: 0;
-    }
-    .button{
-        display: none;
-    }
-    .respons{
-        display: block;
-    }
-
 }
 
 .menu {
@@ -488,3 +469,83 @@ footer{
     padding: 30px;
 }
 
+.slides{
+    border: 2px solid;
+    border-radius: 4px;
+    margin: 50px 20px;
+    padding: 20px;
+
+}
+
+#github{
+    height: 60px;
+}
+
+#github:hover{
+    height: 70px;
+}
+
+.titreSlide{
+    margin: 10px;
+}
+
+button{
+    all: unset;
+    border: 1px solid;
+    padding: 20px;
+    font-size: 1.5em;
+    width: 10em;
+    cursor: pointer;
+}
+
+.slides a{
+    text-decoration: none;
+    border: 1px solid;
+    font-size: 2em;
+    padding: 10px;
+}
+
+footer{
+    display: flex;
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+
+footer section{
+    width: 33%;
+}
+
+iframe{
+    border: 0;
+}
+
+@media (max-width: 768px) {
+    .google::before {
+        margin-left: 20%;
+    }
+    .fixed-header{
+        align-items: center;
+        justify-content: space-around;
+    }
+    .Site, .Amphi, .Salle {
+        width: 40%;
+        margin: 10px;
+        border-radius: 80px;
+        font-size: 1em;
+        border-radius: 80px;
+        padding: 0;
+    }
+    .button{
+        display: none;
+    }
+    .respons{
+        display: block;
+    }
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    footer section{
+        width: 100%;
+    }
+}

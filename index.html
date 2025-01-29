@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ce site web est un site web contenant plusieurs liens afin qu'ils soient facile d'accès pour les étudiants du BUT info d'aix Marseille">
-    <title>Accueil etu</title>
+    <meta name="description" content="Ce site web est un site web contenant plusieurs liens afin qu'ils soient facile
+    d'accès pour les étudiants du BUT info d'Aix Marseille">
+    <title>Site ETU - Accueil </title>
     <link id="theme-link" rel="stylesheet" href="CSS/clair.css">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="shortcut icon" href="IMAGES/Logo_Site.ico" type="image/x-icon">
+
+
 </head>
 <body>
 
@@ -15,13 +18,15 @@
     <header id="main-header" class="fixed-header">
         <button class="button" onclick="toggleMenuById('sommaire-menu')">Sommaire</button>
         <div class="menu2" id="sommaire-menu">
-            <div class="menu-item" onclick="redirectTo('#Prof',false)">Sites profs</div>
-            <div class="menu-item" onclick="redirectTo('#Liens',false)">Liens utiles</div>
-            <div class="menu-item" onclick="redirectTo('#Logiciel', false)">Logiciels utiles</div>
+            <div class="menu-item" onclick="redirectTo('index.html', false)">Accueil</div>
+            <div class="menu-item" onclick="redirectTo('prof.html',false)">Professeurs</div>
+            <div class="menu-item" onclick="redirectTo('links.html',false)">Liens</div>
+            <div class="menu-item" onclick="redirectTo('logiciels.html', false)">Logiciels</div>
             <div class="menu-item" onclick="redirectTo('#Carte',false)">Cartes des prises</div>
             <div class="menu-item" onclick="redirectTo('#Selection-salle',true)">Connexion Réseau</div>
         </div>
-        <span class="respons" onclick="togglePanel('myNav', 'myTheme')"><img class="logo" src="IMAGES/sommaire-logo.png" alt="Logo affichant le sommaire"></span>
+        <span class="respons" onclick="togglePanel('myNav', 'myTheme')"><img class="logo" src="IMAGES/sommaire-logo.png"
+                                                                             alt="Logo affichant le sommaire"></span>
         <div id="clock"></div>
 
         <button class="button" onclick="toggleMenuById('theme-menu')">Changer de thème</button>
@@ -30,7 +35,9 @@
             <div class="menu-item" onclick="changeTheme('CSS/sombre.css')">Sombre</div>
             <div class="menu-item" onclick="changeTheme('CSS/AMOLED.css')">AMOLED</div>
         </div>
-        <span class="respons" onclick="togglePanel('myTheme', 'myNav')"><img class="logo" src="IMAGES/soleil-logo.png" alt="Logo affichant le changement de thème"></span>
+        <span class="respons" onclick="togglePanel('myTheme', 'myNav')"><img class="logo" src="IMAGES/soleil-logo.png"
+                                                                             alt="Logo affichant le changement de thème">
+        </span>
     </header>
 
 <!-- Changement de thème -->
@@ -48,9 +55,10 @@
         <button class="closebtn" onclick="closeNav()">&times;</button>
         <div class="overlay-content">
             <p>Sommaire</p>
-            <div class="menu-item" onclick="redirectTo('#Prof',true)">Sites profs</div>
-            <div class="menu-item" onclick="redirectTo('#Liens',true)">Liens utiles</div>
-            <div class="menu-item" onclick="redirectTo('#Logiciel', true)">Logiciels utiles</div>
+            <div class="menu-item" onclick="redirectTo('index.html',true)">Accueil</div>
+            <div class="menu-item" onclick="redirectTo('prof.html',true)">Sites profs</div>
+            <div class="menu-item" onclick="redirectTo('links.html',true)">Liens utiles</div>
+            <div class="menu-item" onclick="redirectTo('logiciels.html', true)">Logiciels utiles</div>
             <div class="menu-item" onclick="redirectTo('#Carte',true)">Cartes des prises</div>
             <div class="menu-item" onclick="redirectTo('#Selection-salle',true)">Connexion Réseau</div>
         </div>
@@ -63,169 +71,39 @@
         <div class="Site ametice" onclick="redirectTo('https://ametice.univ-amu.fr/\n',true)"><p>AMeTICE</p></div>
 
     </section>
-<hr>
-<!-- Section dédiée aux cours des professeurs -->
-    <h1 id="Prof">Liens Profs</h1>
-    <section class="Container">
-        <div class="Site" onclick="redirectTo('https://ens.casali.me/accueil-enseignement/',true)">
-            <p class="name">Cours CASALI</p>
-            <p class="info">C++</p>
-        </div>
-        <div class="Site" onclick="redirectTo('https://mickael-martin-nevot.com/univ-amu/iut/but-informatique/',true)">
-            <p class="name">Cours NEVOT</p>
-            <p class="info">Linux HTML CSS PHP SQL PLSQL</p>
-        </div>
-        <div class="Site" onclick="redirectTo('https://mmorancey.perso.math.cnrs.fr/TutorielPython.html',true)">
-            <p class="name">Cours MORANCEY</p>
-            <p class="info">Python</p>
-        </div>
-        <div class="Site" onclick="redirectTo('https://amubox.univ-amu.fr/s/CPWtzDRm8cXoLtC', true)">
-            <p class="name">Cours CHTIOUI</p>
-            <p class="info">Diagrammes UML, structure de données et algorithmes</p>
-        </div>
+
+    <hr>
+    <section>
+        <h1>Ce site a pour but de partager les différentes ressources utiles au cursus de BUT Informatique à l'IUT d'Aix-Marseille.</h1>
+        <p>On y retrouve différents types de contenu. Pour plus de détails, consultez les pages ci-dessous : </p>
     </section>
+
+<section class="slides">
+    <h1 class="titreSlide">Cours des professeurs</h1>
+<p>Partie dédiée aux différents cours des professeurs présents sur leur site respectif.</p>
+<a href="prof.html">En savoir plus &#8594;</a>
+</section>
+
+<section class="slides">
+    <h1 class="titreSlide">Liens utiles</h1>
+    <p>Regroupement de liens utiles au BUT Informatique (IA, Communication, Documentation...)</p>
+    <a href="links.html">En savoir plus &#8594;</a>
+</section>
+
+<section class="slides">
+    <h1 class="titreSlide">Logiciels utiles</h1>
+    <p>Sont listés les différents logiciels utilisés durant le BUT Informatique.</p>
+    <a href="logiciels.html">En savoir plus &#8594;</a>
+</section>
+
+<button onclick="plusDivs(-1)">&#8592; Précédent</button>
+<button onclick="plusDivs(1)">Suivant &#8594;</button>
+
+
 <hr>
-<!--Section dédiée aux liens utiles au BUT Informatique.-->
-    <h1 id="Liens">Liens Utiles</h1>
-    <section class="Container">
-        <a class="Site" target="_blank" href="https://labtech.univ-amu.fr/portal/webclient/#/launchitems" title="Machines virtuelles IUT">
-            <p class="name">VDI</p>
-            <p class="info">Service de poste de travail AMU virtualisé.</p>
-        </a>
-        <a class="Site" target="_blank" href="https://cplusplus.com/reference/cctype/?kw=cctype" title="Prédicats C++">
-            <p class="name">Prédicats C++</p>
-            <p class="info">Liste des prédicats du langage C++.</p>
-        </a>
-        <a class="Site" target="_blank" href="https://chatgpt.com/" title="Si besoin d'explications">
-            <p class="name">Chat GPT</p>
-            <p class="info">Intelligence Artificielle.</p>
-        </a>
-        <a class="Site" target="_blank" href="https://gemini.google.com/app?hl=fr" title="Si besoin d'explications">
-            <p class="name">Gemini</p>
-            <p class="info">Intelligence Artificielle (Google).</p>
-
-        </a>
-        <a class="Site" target="_blank" href="https://claude.ai/" title="Si besoin d'explications">
-            <p class="name">Claude</p>
-            <p class="info">Intelligence Artificielle.</p>
-
-        </a>
-        <a class="Site" target="_blank" href="https://github.com/" title="GitHub">
-            <p class="name">GitHub</p>
-            <p class="info">Service en ligne d'hébergement de code.</p>
-        </a>
-        <a class="Site" target="_blank" href="https://www3.ntu.edu.sg/home/ehchua/programming/index.html">
-            <p class="name">YAIP Java</p>
-            <p class="info">Exercices de Java pour la ressource R2.01.</p>
-        </a>
-        <a class="Site" target="_blank" href="https://distrosea.com/fr/" title="Distributions Linux">
-            <p class="name">Distrosea</p>
-            <p class="info">Outil d'essai de distribution Linux.</p>
-        </a>
-        <a class="Site" target="_blank" href="https://www.w3schools.com/howto/" title="Tutoriels web">
-            <p class="name">w3schools</p>
-            <p class="info">Site web éducatif pour l'apprentissage informatique.</p>
-        </a>
-        <a class="Site" target="_blank" href="https://discord.com/channels/@me" title="Pour communiquer">
-            <p class="name">Discord</p>
-            <p class="info">Plateforme de messagerie instantanée.</p>
-        </a>
-
-        <a class="Site" target="_blank" href="https://www.figma.com/fr-fr/" title="Design web">
-            <p class="name">Figma</p>
-            <p class="info">Editeur de graphiques et outil de prototypage.</p>
-        </a>
-        <a class="Site" target="_blank" href="https://www.whitescreen.online/fr/ecran-fausse-mise-a-jour-windows-11/" title="Fausse mise à jour">
-            <p class="name">Whitescreen</p>
-            <p class="info">Outil de test d'écran.</p>
-        </a>
-        <a class="Site" target="_blank" href="https://secb.manett-ondemand.cityway.fr/SECB/fr-FR" title="Service bus">
-            <p class="name">Bus à la demande</p>
-            <p class="info">Transport à la demande de Salon Étang Côte Bleue.</p>
-        </a>
-
-        <a class="Site" target="_blank" href="https://www.instagram.com/direct/inbox/" title="Instagram direct">
-            <p class="name">Instagram</p>
-            <p class="info">Réseau social de partage de photo et vidéo.</p>
-        </a>
-
-        <a class="Site" target="_blank" href="https://drive.google.com/drive/my-drive?hl=fr" title="Pour partager des fichiers">
-            <p class="name">Google Drive</p>
-            <p class="info">Service de stockage cloud et suite bureautique.</p>
-        </a>
-        <a class="Site" target="_blank" href="https://docs.google.com/document/?usp=docs_home&hl=fr" title="Créer et partager des documents">
-            <p class="name">Google Docs</p>
-            <p class="info">Service de traitement de texte en ligne.</p>
-        </a>
-        
-        <a class="Site" target="_blank" href="https://docs.google.com/presentation/?usp=slides_home&hl=fr" title="Créer et partager des présentations">
-            <p class="name">Google Slides</p>
-            <p class="info">Service de présentation en ligne.</p>
-        </a>
-        
-        <a class="Site" target="_blank" href="https://docs.google.com/forms/?usp=forms_home&hl=fr" title="Créer et partager des formulaires">
-            <p class="name">Google Forms</p>
-            <p class="info">Service d'administration d'enquêtes en ligne.</p>
-        </a>
-        
-        <a class="Site" target="_blank" href="https://docs.google.com/spreadsheets/?usp=sheets_home&hl=fr" title="Créer et partager des tableurs">
-            <p class="name">Google Sheets</p>
-            <p class="info">Service de tableur en ligne.</p>
-        </a>
-        
-        <a class="Site" href="#modeVeille" title="Pour reposer les écrans OLED" onclick="toggleFullScreen(),changeTheme('CSS/AMOLED.css')">
-            <p class="name">Veille</p>
-            <p class="info">Mise en veille de l'ordinateur.</p>
-        </a>
-
-    </section>
-<hr>
-<!--Section dédiée aux logiciels utiles afin de programmer en BUT Informatique-->
-    <h1 id="Logiciel">Logiciels utiles</h1>
-    <section class="Container">
-        <a class="Site" target="_blank" href="https://www.jetbrains.com/fr-fr/lp/toolbox/">
-            <p class="name">JetBrains Toolbox</p>
-            <p class="info">Suite d'outils de développement professionnel.</p>
-        </a>
-        <a class="Site" target="_blank" href="https://code.visualstudio.com/download">
-            <p class="name">Visual Studio Code</p>
-            <p class="info">Editeur de code extensible.</p>
-        </a>
-        <a class="Site" target="_blank" href="https://www.qt.io/download-dev" >
-            <p class="name">QT Creator</p>
-            <p class="info">Logiciel utilisé pour coder en C++.</p>
-        </a>
-        <a class="Site" target="_blank" href="https://www.mysql.com/downloads/">
-            <p class="name">MySQL</p>
-            <p class="info">Système de gestion de base de données.</p>
-        </a>
-        <a class="Site" target="_blank" href="https://jupyter.org/install">
-            <p class="name">Jupyter</p>
-            <p class="info">Outil dédié à la programmation en Python. </p>
-        </a>
-        <a class="Site" target="_blank" href="https://www.spyder-ide.org/download/">
-            <p class="name">Spyder</p>
-            <p class="info">Environnement de développement en Python.</p>
-        </a>
-
-        <a class="Site" target="_blank" href="https://www.netacad.com/fr/resources/lab-downloads?courseLang=fr-FR">
-            <p class="name">Packet Tracer</p>
-            <p class="info">Simulateur de matériel réseau Cisco.</p>
-        </a>
-        <a class="Site" target="_blank" href="https://staruml.io/">
-            <p class="name">StarUML</p>
-            <p class="info">Outil de génie logiciel dédié à la modélisation UML.</p>
-        </a>
-        <a class="Site" target="_blank" href="https://www.eclipse.org/downloads/">
-            <p class="name">Eclipse</p>
-            <p class="info">IDE open source utilisé pour coder en Java.</p>
-        </a>
-
-    </section>
 
 
 <!--Section dédiée à la cartes des prises dans l'IUT d'Aix-Marseille-->
-<hr>
     <h1 id="Carte">Carte des prises</h1>
 
 <!--Dans les amphithéâtres de l'IUT-->
@@ -385,11 +263,29 @@
         <p>Cette zone est faite pour reposer les écrans OLED</p>
         <div id="modeVeille" style="height: calc(100vh + 200px);"></div>
     </div>
+<script src="JAVASCRIPT/slideshow.js"></script>
 
-    <script src="JAVASCRIPT/main.js"></script>
+<script src="JAVASCRIPT/main.js"></script>
 
 <footer>
-    Site de ressources du département Informatique de l'IUT d'Aix-en-Provence. Réalisé par Maxence TORCHIN, 2024.
+    <section>
+        <h3>Apporter ma contribution</h3>
+        <p>Vous pouvez apporter votre contribution à ce projet via le lien github en cliquant sur le logo.</p>
+        <a href="https://github.com/TORCHIN-Maxence-24020376/Site-ETU"><img src="IMAGES/github.svg" alt="github" id="github"></a>
+    </section>
+
+    <section>
+        <h3>Description</h3>
+        <p>Site de ressources du département Informatique de l'IUT d'Aix-en-Provence. Réalisé par Maxence TORCHIN et Cyril TAMINE, 2024.</p>
+        <p>Ce site contient tout ce qui vous sera utiles lors de vos années de BUT info à Aix-en-Provence.</p>
+    </section>
+    
+    <section>
+        <h3>Créateurs</h3>
+        <iframe src="https://torchin-maxence-24020376.github.io/signature/HTML/bleu.html"  style="height: 150px; width: 300px;"></iframe>
+        <iframe src="https://torchin-maxence-24020376.github.io/signature/HTML/cyril.html" style="height: 150px; width: 300px;"></iframe>
+    </section>
+    
 </footer>
 </body>
 </html>

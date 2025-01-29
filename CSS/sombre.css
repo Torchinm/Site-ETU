@@ -39,3 +39,11 @@ body::-webkit-scrollbar-thumb {
 .respons img{
     filter: invert(1);
 }
+
+.slides a{
+    color: white;
+}
+
+#github{
+    filter: invert(1);
+}
